@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jung <8735132@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "git@github.com:JungHanYoung/memopad_typescript.git"
 }
