@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2015", "dom", "es6"],
+    "sourceMap": true,
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "jsx": "react"
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*.tsx", "./server/**/*.ts"]
+}
