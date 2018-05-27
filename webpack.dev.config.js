@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
 	mode: 'development',
@@ -46,6 +47,14 @@ const config = {
 				test: /.(ts|tsx)$/,
 				use: 'ts-loader',
 				exclude: '/node_modules'
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					'style-loader', // creates style nodes from JS strings
+					'css-loader', // translates CSS into CommonJS
+					'sass-loader' // compiles Sass to CSS
+				]
 			}
 		]
 	},

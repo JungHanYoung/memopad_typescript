@@ -43,6 +43,11 @@ app.get('/hello', (_, res) => {
 	return res.send('Hello Jeong');
 });
 
+/* client-side routing surport */
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(__dirname, './../public/index.html'));
+});
+
 // error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 	console.log(err.stack);

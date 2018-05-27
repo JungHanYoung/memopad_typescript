@@ -26,6 +26,30 @@ const config = {
 				use: 'awesome-typescript-loader',
 				exclude: '/node_modules'
 			},
+			{
+				test: /.scss$/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true
+						}
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
+						}
+					}
+				]
+			},
+			{
+				test: /.css$/,
+				use: 'style!css-loader'
+			},
 			{ enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
 		]
 	}
